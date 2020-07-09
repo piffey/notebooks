@@ -1,0 +1,4 @@
+domaintools-api
+nest_asyncio
+python-dotenv
+requests

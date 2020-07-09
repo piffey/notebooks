@@ -1,0 +1,19 @@
+# Ignore dotfiles so we can run git in the container if we want from the
+# Jupyter command line. We have to do some hackery here. The .env file
+# is how we load in our secrets -- see README.md.
+.*
+!.gitignore
+
+# I know it janky, but it works. Unignore the user-settings folder since
+# we want to commit that.
+!.jupyter
+.jupyter/*
+!.jupyter/lab
+.jupyter/lab/*
+!.jupyter/lab/user-settings
+.jupyter/lab/user-settings/*
+!.jupyter/lab/user-settings/@jupyterlab
+.jupyter/lab/user-settings/@jupyter-lab/*
+!.jupyter/lab/user-settings/@jupyter-lab/apputils-extension/*
+
+# Blow these away each time so we do not have to deal with them.
