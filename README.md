@@ -24,3 +24,22 @@ Instead use the system of the python-dotenv package where a .env file is loaded
 into your Jupyter Notebooks automatically. See contained notebooks for an
 example. There are certainly more elegant ways to do this with Vault or whatever
 but nothing this simple.
+
+## Clearing Sensitive Data In Notebooks
+
+Before committing your notebooks, be careful about what data is contained within
+them -- particularly if you are using a public repository. All of your work,
+including any sensitive data during the course of your investigations, will be a
+part of the notebooks. You can clear that using the following command:
+
+`jupyter nbconvert --clear-output --inplace notebook.ipynb`
+
+The `nbconvert` command also recognizes globbing so a simple `*.ipynb` can clear
+all of your notebooks.
+
+## Additional Data Sets
+
+The docker-compose setup automatically loads in /data in the current working
+directory to /data in the /data directory of the docker container. Therefore
+if you need additional datasets (ex. historical ASN data for pyasn) place them
+in that directory to have them become available.

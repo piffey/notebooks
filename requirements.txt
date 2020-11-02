@@ -1,4 +1,13 @@
+elasticsearch
 domaintools-api
+dnsdb
+itables
 nest_asyncio
+pandas
+pyasn
 python-dotenv
+publicsuffixlist
 requests
+textblob
+tqdm
+twint
